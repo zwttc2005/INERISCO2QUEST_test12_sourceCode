@@ -1,1 +1,1 @@
-../hRefpropGas/hRefpropGasThermo.H
+../equation_of_state/hRefpropGas/hRefpropGasThermo.H

@@ -17,7 +17,7 @@ scalar thickness = 0.011;
 scalar id = 0.0508;
 scalar od = id + 2.*thickness; 
 scalar rhowall = 7950.0;
-scalar cpwall = 200.0;
+scalar cpwall = 100.0;
 scalar kwall = 40.0;
 scalar htcWall = 1./(0.5*id/kwall*Foam :: log((od)/id));
 totalArea = 3.1415926*id*length;
@@ -65,7 +65,7 @@ for(i = 0; i < celln+1; i++)
 	// heat transfer to the vapour phase from the wall
 	if (TwallS > thermo1.T()[i])
 	{	
-		qV_wallS = 10.0*alpha1[i]*htcVapS*totalArea/totalVolume*(TwallS - thermo1.T()[i]);
+		qV_wallS = 15.0*alpha1[i]*htcVapS*totalArea/totalVolume*(TwallS - thermo1.T()[i]);
 	}
 	else
 	{
